@@ -2,8 +2,12 @@
 /* Desktop 1250~1920 */
 /* Tablet 1249~850 */
 @media screen and (max-width: 1249px) {
+    #wrap .intro {
+        padding: 0 80px;
+    }
     #wrap .intro .container {
-        max-width: 864px;
+        width: 100%;
+        /* margin: 0 80px; 다른 요소랑 겹칠 수 있으므로 안전하게 padding으로 주기. */
     }
     #wrap .intro .container h1:nth-child(1) {
         margin-bottom: 50px; 
@@ -23,8 +27,11 @@
 }
 /* Mobile 849~320 */
 @media screen and (max-width: 849px) {
-    #wrap .intro .container {
-        max-width: 410px;
+    #wrap .intro {
+        padding: 0 15px;
+    }
+    #wrap .intro .container h1:nth-child(1) a img {
+        width: 40px;
     }
     #wrap .intro .container h1:nth-child(2) {
         font-size: 1.875rem; font-weight: 700;
@@ -36,5 +43,7 @@
     #wrap .intro .container .sponsor_question {
         width: 333px; line-height: 54px;
         font-size: 1.25rem;
+        margin: 0 auto; padding: 10px 30px;
+        float: none;
     }
 }

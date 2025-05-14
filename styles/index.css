@@ -1,6 +1,6 @@
 /* index.css */
 /* 1행|북극곰 후원 안내 =================================== */
-#wrap {}
+#wrap {} /* 기본값 유지를 위해 작성하지 않음. 기본값->너비는 부모의 100%, 높이는 내용만큼 */
 #wrap .intro {
     height: 100vh;
     background: url(../images/bg1.png) no-repeat center top 50% / cover;
@@ -17,7 +17,6 @@
 }
 #wrap .intro .container {
     position: relative; z-index: 20; top: 100px; /* relative가 있으니 top써도 가능 */
-    border: 1px solid aqua;
     /* px이 적용되어있는 요소 기준으로 반응형 적용. 이 크기보다 커지면 안되므로 max-width기준을 px가 정해져있는 요소로 잡는다. 즉, 계속 커지지말고 1250px까지만 커진다. 요소를 기준으로!! */
     max-width: 1250px; min-width: 320px;
     margin: 0 auto; /* 디바이스 크기보다 width가 작은 블록요소를 가운데 배치하는 방법 */
@@ -56,12 +55,68 @@
     font-size: 1.625rem; 
     float: right;
     /* padding: 10px 0; */
-    width: 439px; line-height: 54px; /* 이미지 제외하고 작업하고 있어서 너비를 설정해준 것. 이미지 넣은 경우는 padding만 사용해도 상관없음. */
+    width: 439px; line-height: 51px; /* 이미지 제외하고 작업하고 있어서 너비를 설정해준 것. 이미지 넣은 경우는 padding만 사용해도 상관없음. */
     background-color: #050505;
     border-radius: 30px;
     color: #fff;
 }
 /* 2행|퀴즈 =================================== */
+#wrap .quiz {
+    background: url(../images/quiz_bg.png) center / cover;
+    padding: 150px 0;
+}
+#wrap .quiz .container {
+    width: 1250px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid orange;
+}
+#wrap .quiz .container #left_quiz {}
+#wrap .quiz .container #left_quiz * {
+    color: #fff;
+}
+#wrap .quiz .container #left_quiz h2 {
+    font-size: 3.438rem; font-weight: 500;
+    text-align: center;
+    margin-bottom: 38px;
+}
+#wrap .quiz .container #left_quiz p {
+    font-size: 1.25rem; line-height: 1.7;
+}
+#wrap .quiz .container #left_quiz .list {
+    display: grid; grid-template-rows: repeat(4, 34px);
+    margin: 8px 0 38px;
+}
+/* 부모인 경우 display: flex 또는 grid, 자기 자신인 경우 display:block; */
+#wrap .quiz .container #left_quiz .list label {
+}
+#wrap .quiz .container #left_quiz .list label input[name=quiz] {
+    display: none;
+}
+#wrap .quiz .container #left_quiz .list label input[name=quiz]:checked +span{
+    background-image: url(../images/quiz_checkon.png);
+}    
+#wrap .quiz .container #left_quiz .list label span {
+    background-image: url(../images/quiz_checkoff.png);
+    background-repeat: no-repeat; background-position-y: 4PX;
+    display: block; line-height: 34px; padding-left: 48px;
+    font-size: 1.25rem;
+}
+#wrap .quiz .container #left_quiz .answer_btn {
+    background-color: #050505;
+    width: 100%; height: 54px; border-radius: 50px;
+    font-size: 1.25rem;
+}
+#wrap .quiz .container .right {
+    text-align: right;
+    margin: 68px 0;
+}
+#wrap .quiz .container .right p {}
+#wrap .quiz .container .right p:nth-child(1) {}
+#wrap .quiz .container .right p:nth-child(1) img {}
+#wrap .quiz .container .right p:nth-child(2) {
+    margin-top: 20px; color: #fff; font-size: 1.25rem;
+}
 /* 3행|새끼북극곰 이야기=================================== */
 /* 4행|빙하면적감소 =================================== */
 /* 5행|인류재앙 =================================== */
