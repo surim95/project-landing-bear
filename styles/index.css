@@ -1,4 +1,6 @@
 /* index.css */
+/* 반응형 CSS 속성 변경 시 애니메이션 적용 속성 */
+body * {transition: all 0.2s;}
 /* 1행|북극곰 후원 안내 =================================== */
 #wrap {} /* 기본값 유지를 위해 작성하지 않음. 기본값->너비는 부모의 100%, 높이는 내용만큼 */
 #wrap .intro {
@@ -66,10 +68,11 @@
     padding: 150px 0;
 }
 #wrap .quiz .container {
-    width: 1250px; margin: 0 auto;
+    max-width: 1250px; min-width: 320px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid orange;
+    gap: 295px;
 }
 #wrap .quiz .container #left_quiz {}
 #wrap .quiz .container #left_quiz * {
@@ -109,15 +112,46 @@
 }
 #wrap .quiz .container .right {
     text-align: right;
-    margin: 68px 0;
+    padding: 68px 0;
 }
 #wrap .quiz .container .right p {}
 #wrap .quiz .container .right p:nth-child(1) {}
-#wrap .quiz .container .right p:nth-child(1) img {}
+#wrap .quiz .container .right p:nth-child(1) img {
+    width: 100%;
+}
 #wrap .quiz .container .right p:nth-child(2) {
     margin-top: 20px; color: #fff; font-size: 1.25rem;
 }
 /* 3행|새끼북극곰 이야기=================================== */
+#wrap .ad {
+    background: url(../images/video_bg.png) right / cover;
+    padding: 200px 0;
+}
+#wrap .ad .container {
+    max-width: 1250px; min-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+#wrap .ad .container h2 {
+    font-size: 3.438rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 70px;
+    letter-spacing: -0.01rem;
+}
+#wrap .ad .container iframe {
+    max-width: 900px; width: 100%; height: 600px; /* 자동으로 가변형이 진행되지 않으면 상대 크기를 따로 지정해준다. */
+}
+#wrap .ad .container .sponsor_btn {
+    font-size: 2.125rem; font-weight: 700; /* line-height: 1.2; */
+    display: block;
+    /* padding: 15px 70px; */
+    width: 409px; line-height: 71px;
+    background: linear-gradient(90deg, #fe9300, #ff7300);
+    border-radius: 50px;
+    margin: 70px auto 0;
+    color: #fff;
+}
 /* 4행|빙하면적감소 =================================== */
 /* 5행|인류재앙 =================================== */
 /* 6행|지구위기 =================================== */

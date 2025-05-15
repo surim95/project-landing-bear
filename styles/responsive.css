@@ -2,12 +2,16 @@
 /* Desktop 1250~1920 */
 /* Tablet 1249~850 */
 @media screen and (max-width: 1249px) {
+    /* 1행 intro ================================================ */
     #wrap .intro {
         padding: 0 80px;
     }
     #wrap .intro .container {
         width: 100%;
         /* margin: 0 80px; 다른 요소랑 겹칠 수 있으므로 안전하게 padding으로 주기. */
+    }
+    #wrap .quiz .container .right {
+        padding: 94px 0;
     }
     #wrap .intro .container h1:nth-child(1) {
         margin-bottom: 50px; 
@@ -17,16 +21,39 @@
     }
     #wrap .intro .container .sponsor_btn {
         font-size: 1.375rem;
-        width: 410px; line-height: 62px;
+        width: 270px; line-height: 62px;
         margin: 50px auto;
     }
     #wrap .intro .container .sponsor_question {
         width: 333px; line-height: 54px;
         font-size: 1.25rem;
     }
+    /* 2행 Quiz ================================================ */
+    #wrap .quiz {
+        padding: 150px 80px;
+    }
+    #wrap .quiz .container {
+        gap: 142px;
+    }
+    #wrap .quiz .container #left_quiz h2 {
+        font-size: 2.5rem;
+        margin-bottom: 56px;
+    }
+    /* 3행 새끼북극곰 =============================================== */
+    #wrap .ad {
+        padding: 200px 80px;
+    }
+    #wrap .ad .container h2 {
+        font-size: 2.5rem;
+    }
+    #wrap .ad .container .sponsor_btn {
+        font-size: 1.375rem;
+        width: 270px; line-height: 62px;
+    }
 }
 /* Mobile 849~320 */
 @media screen and (max-width: 849px) {
+    /* 1행 intro ================================================ */
     #wrap .intro {
         padding: 0 15px;
     }
@@ -36,14 +63,39 @@
     #wrap .intro .container h1:nth-child(2) {
         font-size: 1.875rem; font-weight: 700;
     }
-    #wrap .intro .container .sponsor_btn {
-        width: 270px; line-height: 62px;
-        margin: 50px auto;
-    }
     #wrap .intro .container .sponsor_question {
         width: 333px; line-height: 54px;
         font-size: 1.25rem;
         margin: 0 auto; padding: 10px 30px;
         float: none;
+    }
+    /* 2행 Quiz ================================================ */
+    #wrap .quiz {
+        padding: 50px 15px;
+    }
+    #wrap .quiz .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr;
+        gap: 0;
+    }
+    #wrap .quiz .container #left_quiz h2 {
+        text-align: left;
+    }
+    #wrap .quiz .container .right {
+        text-align: center;
+        margin: 50px 0;
+    }
+    #wrap .quiz .container .right p:nth-child(1) img {
+        width: 70%;
+    }
+    /* 3행 새끼북극곰 ============================================== */
+    #wrap .ad {
+        padding: 50px 15px;
+    }
+    #wrap .ad .container iframe {
+        height: 400px;
+    }
+    #wrap .ad .container h2 {
+        font-size: 1.375rem;
     }
 }
