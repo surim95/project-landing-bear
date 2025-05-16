@@ -1,15 +1,12 @@
 /* index.css */
 /* 반응형 CSS 속성 변경 시 애니메이션 적용 속성 */
-body * {transition: all 0.2s;
-        transition: padding 0s;
-        transition: margin 0s;
-       }
+body * {transition: all 0.2s}
 /* 1행|북극곰 후원 안내 =================================== */
 #wrap {} /* 기본값 유지를 위해 작성하지 않음. 기본값->너비는 부모의 100%, 높이는 내용만큼 */
 #wrap .intro {
     height: 100vh;
     background: url(../images/bg1.png) no-repeat center top 50% / cover;
-    margin: 0 auto;
+    margin: 0 auto; transition: margin 0s;
     position: relative;
 }
 #wrap .intro::after {
