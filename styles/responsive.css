@@ -82,6 +82,19 @@
     #wrap .disaster .container .list li >p {
         font-size: 1rem ;
     }
+    /* 7행|WWF 단체홍보 =================================== */
+    #wrap .wwf {
+        padding: 200px 80px;
+    }
+    #wrap .wwf .container h2 {
+        font-size: 3.125rem;
+    }
+    #wrap .wwf .container p {
+        font-size: 1.375rem;
+    }
+    #wrap .wwf .container p:nth-child(2) {
+        margin: 40px 0;
+    }
 }
 /* Mobile 849~320 */
 @media screen and (max-width: 849px) {
@@ -172,5 +185,18 @@
     #wrap .disaster .container .list li >p {
         font-size: 0.813rem;
         height: max-content; /* 글자 줄에 따라 늘어나도록 하기. */
+    }
+    /* 7행|WWF 단체홍보 =================================== */
+    #wrap .wwf {
+        padding: 70px 15px;
+    }
+    #wrap .wwf .container h2 {
+        font-size: 1.875rem;
+    }
+    #wrap .wwf .container p {
+        font-size: 0.813rem;
+    }
+    #wrap .wwf .container p:nth-child(2) {
+        margin: 22px 0;
     }
 }
